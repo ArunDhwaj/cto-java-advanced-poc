@@ -1,3 +1,9 @@
+# All files in tmp or build directory
+./build
+./build/*
+./tmp
+./tmp/*
+
 # Compiled class file
 *.class
 
