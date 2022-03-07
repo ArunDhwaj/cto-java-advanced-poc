@@ -3,6 +3,8 @@
 ./build/*
 ./tmp
 ./tmp/*
+./.gradle
+./gradle/*
 
 # Compiled class file
 *.class

@@ -1,0 +1,25 @@
+
+GIST:
+How to synchronise when there are large number of threads, when each of them doing specific task.
+
+Detail:
+
+Requirements for printing large number of sequential number by each each-remainder threads in sequence based on remainder.
+The goal is to print the numbers in order, while eac thread only prints the number with particular remainder.
+
+Example: Print 1-40 in increasing sequence, by group of 4 threads.
+Scenario: n = 40, k = 4; (number of threads)
+
+Output:
+Thread t1 = 1, 5, 9, ..., 37
+Thread t2 = 2, 6, 10, ..., 38
+Thread t3 = 3, 7, 11, ..., 39
+Thread t3 = 4, 8, 12, ..., 40
+
+Solution approach: Use semaphore instead of boolean for synchronising.
+
+A semaphore controls access to a shared resource through the use of a counter.
+If the counter is greater than zero, then access is allowed. If it is zero, then access is denied.
+Java provides the Semaphore class in the java.util.concurrent package and we can use it to implement
+the explained mechanism. More details about semaphores can be found here.
+

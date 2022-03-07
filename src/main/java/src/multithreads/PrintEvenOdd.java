@@ -7,8 +7,8 @@ public class PrintEvenOdd {
 //        System.out.println("1: printEvenOdd");
         Printer print = new Printer();
 
-        Thread t1 = new Thread(new TaskEvenOdd(print, 20, false), "Odd");
-        Thread t2 = new Thread(new TaskEvenOdd(print, 20, true), "Even");
+        Thread t1 = new Thread(new src.multithreads.TaskEvenOdd(print, 20, false), "Odd");
+        Thread t2 = new Thread(new src.multithreads.TaskEvenOdd(print, 20, true), "Even");
 
 //        System.out.println("2: printEvenOdd");
         t1.start();

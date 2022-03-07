@@ -2,6 +2,7 @@ package src;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import src.multithreads.PrintEvenOdd;
+import src.threadssynchronization.PrintRemainder;
 
 public class Driver {
 
@@ -12,8 +13,9 @@ public class Driver {
         System.out.println("Java Advanced POC !!!");
 
         PrintEvenOdd p = new PrintEvenOdd();
-        p.printEvenOdd();
+//        p.printEvenOdd();
 
-
+        PrintRemainder pr = new PrintRemainder();
+        pr.printRemainder();
     }
 }
