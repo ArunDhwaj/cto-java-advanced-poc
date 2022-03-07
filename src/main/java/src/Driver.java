@@ -1,6 +1,7 @@
 package src;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import src.multithreads.PrintEvenOdd;
 
 public class Driver {
 
@@ -8,10 +9,11 @@ public class Driver {
 
     public static void main(String[] args)
     {
-        System.out.println("Hello World !!!");
-        logger.debug("Hello World !!!");
-        logger.debug("Debugging log message");
-        logger.info("Info log message");
-//        logger.error("Error log message");
+        System.out.println("Java Advanced POC !!!");
+
+        PrintEvenOdd p = new PrintEvenOdd();
+        p.printEvenOdd();
+
+
     }
 }

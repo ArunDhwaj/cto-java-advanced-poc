@@ -1,0 +1,6 @@
+
+Requirements for EvenOdd printing by two Thread.
+The goal is to print the numbers in order, while one thread only prints the even numbers
+and the other thread only prints the odd numbers.
+We'll be using the concepts of thread synchronization and inter-thread communication
+to solve the problem.
