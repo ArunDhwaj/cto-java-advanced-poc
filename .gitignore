@@ -1,7 +1,7 @@
 # All files in tmp or build directory
 ./build
 ./build/*
-./tmp
+./build/tmp
 ./tmp/*
 ./.gradle
 ./gradle/*

@@ -8,6 +8,11 @@ public class PrinterScale{
     private Semaphore semRemainder3 = new Semaphore(0);
     private Semaphore semRemainder4 = new Semaphore(0);
 
+    private Semaphore semRemainder4r = new Semaphore(1);
+    private Semaphore semRemainder3r = new Semaphore(0);
+    private Semaphore semRemainder2r = new Semaphore(0);
+    private Semaphore semRemainder1r = new Semaphore(0);
+
     void printRemainder1(int num)
     {
         try
@@ -25,7 +30,6 @@ public class PrinterScale{
 
     void printRemainder2(int num)
     {
-//        System.out.println("printRemainder2: " + num);
         try
         {
             semRemainder2.acquire();
@@ -41,8 +45,6 @@ public class PrinterScale{
 
     void printRemainder3(int num)
     {
-//        System.out.println("printRemainder3: " + num);
-
         try
         {
             semRemainder3.acquire();
@@ -58,8 +60,6 @@ public class PrinterScale{
 
     void printRemainder4(int num)
     {
-//        System.out.println("printRemainder4: " + num);
-
         try
         {
             semRemainder4.acquire();
@@ -71,6 +71,65 @@ public class PrinterScale{
 
         System.out.println(Thread.currentThread().getName() + " : " + num);
         semRemainder1.release();
+    }
+
+    void printRemainder4Rev(int num)
+    {
+        try
+        {
+            semRemainder4r.acquire();
+        }
+        catch (InterruptedException e)
+        {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println(Thread.currentThread().getName() + " : " + num);
+        semRemainder3r.release();
+    }
+
+    void printRemainder3Rev(int num)
+    {
+        try
+        {
+            semRemainder3r.acquire();
+        }
+        catch (InterruptedException e)
+        {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println(Thread.currentThread().getName() + " : " + num);
+        semRemainder2r.release();
+    }
+
+    void printRemainder2Rev(int num)
+    {
+        try
+        {
+            semRemainder2r.acquire();
+        }
+        catch (InterruptedException e)
+        {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println(Thread.currentThread().getName() + " : " + num);
+        semRemainder1r.release();
+    }
+    void printRemainder1Rev(int num)
+    {
+        try
+        {
+            semRemainder1r.acquire();
+        }
+        catch (InterruptedException e)
+        {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println(Thread.currentThread().getName() + " : " + num);
+        semRemainder4r.release();
     }
 
 }
