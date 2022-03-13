@@ -3,6 +3,7 @@ package src;
 import src.generic_programming.MyGenericList;
 import src.generic_programming.Node;
 import src.generic_programming.Pair;
+import src.java_optimization.threading.ThreadCapabilitiesDebugging;
 import src.java_optimization.threading.ThreadCreation;
 import src.multithreads.PrintEvenOdd;
 import src.threadssynchronization.PrintRemainder;
@@ -27,6 +28,8 @@ public class Router {
           testGeneric4();
 
           threadCreation();
+
+          threadCapabilitiesDebugging();
 
     }
 
@@ -95,5 +98,11 @@ public class Router {
     {
         ThreadCreation threadCreation = new ThreadCreation();
         threadCreation.ThreadCreation();
+    }
+
+    public void threadCapabilitiesDebugging()
+    {
+        ThreadCapabilitiesDebugging threadCapabilitiesDebugging = new ThreadCapabilitiesDebugging();
+        threadCapabilitiesDebugging.ThreadCapabilitiesDebugging();
     }
 }
