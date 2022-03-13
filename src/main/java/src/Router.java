@@ -3,6 +3,7 @@ package src;
 import src.generic_programming.MyGenericList;
 import src.generic_programming.Node;
 import src.generic_programming.Pair;
+import src.java_optimization.threading.ThreadCreation;
 import src.multithreads.PrintEvenOdd;
 import src.threadssynchronization.PrintRemainder;
 
@@ -23,7 +24,9 @@ public class Router {
 
 //        testGeneric3();
 
-        testGeneric4();
+          testGeneric4();
+
+          threadCreation();
 
     }
 
@@ -88,4 +91,9 @@ public class Router {
         System.out.println(dummy.getData());
     }
 
+    public void threadCreation()
+    {
+        ThreadCreation threadCreation = new ThreadCreation();
+        threadCreation.ThreadCreation();
+    }
 }
